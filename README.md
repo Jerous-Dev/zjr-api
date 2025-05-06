@@ -144,7 +144,7 @@ bot.listen(delay=0, thread=True, run_forever=True, type="websocket")
 ### Example Handle Message
 <details>
 <summary><b><i>Code</b></i></summary>
-```py
+  ```py
 from zjr-api import *
 from zjr-api.models import *
 
@@ -165,7 +165,8 @@ bot.listen(delay=0, thread=True, run_forever=True, type="websocket")
 
 > - If the message is not ``string`` do not process this message.
 > - If the message is ``.hi`` will print author id of message to terminal.
-```
+  ```
+</br>
 </details>
 </br>
 
