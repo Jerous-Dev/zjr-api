@@ -34,7 +34,7 @@ However, there's a catch! **Using this library may not comply with Zalo's Terms 
 ## Installation
 
 ```bash
-pip install git+https://github.com/Jerous-Dev/zjr-api.git
+pip install git+https://github.com/Jerous/zjr-api.git
 ```
 
 </br>
@@ -142,9 +142,8 @@ bot.listen(delay=0, thread=True, run_forever=True, type="websocket")
 </br>
 
 ### Example Handle Message
-<details>
-<summary><b><i>Code</b></i></summary>
-  ```py
+
+```py
 from zjr-api import *
 from zjr-api.models import *
 
@@ -166,10 +165,8 @@ bot.listen(delay=0, thread=True, run_forever=True, type="websocket")
 > - If the message is not ``string`` do not process this message.
 > - If the message is ``.hi`` will print author id of message to terminal.
   ```
-</br>
-</details>
-</br>
 
+</br>
 <!-- fetch_account_info -->
 
 ### Fetch Account Information
