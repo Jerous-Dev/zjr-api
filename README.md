@@ -34,7 +34,7 @@ However, there's a catch! **Using this library may not comply with Zalo's Terms 
 ## Installation
 
 ```bash
-pip install git+https://github.com/Jerous/zjr-api.git
+pip install git+https://github.com/Jerous-Dev/zjr-api.git
 ```
 
 </br>
