@@ -190,6 +190,7 @@ Can't get information of **hidden phone number** or **locked account**
 ```py
 self.fetch_phone_number("<phone number>")
 ```
+- phone number: it is the user's phone number.
 
 <!-- END FetchPhoneNumber -->
 
@@ -198,69 +199,11 @@ self.fetch_phone_number("<phone number>")
 <!-- fetchUserInfo -->
 ### Fetch User Info
 
-This function will get user information using that user ID.
+```py
+self.fetch_user_info(<user id>)
+```
 
-> - In ``Normal``/``Async`` code style you can get user id with author_id argument
-> - In ``Simple`` code style you can get user id with ctx.author_id argument
-> - Or you can use user id if you already have one
-
-<details>
-<summary><b><i>Normal</b> code style</i></summary>
-
-- Outside Module Function
-
-  ```py
-  bot.fetchUserInfo(<user id>)
-  ```
-
-</br>
-
-- Inside Module Function
-
-  ```py
-  self.fetchUserInfo(<user id>)
-  ```
-
-</details>
-
-<details>
-<summary><b><i>Async</b> code style</i></summary>
-
-- Outside Module Function
-
-  ```py
-  asyncio.run(bot.fetchUserInfo(<user id>))
-  ```
-
-</br>
-
-- Inside Module Function (You can use ``await`` instead.)
-
-  ```py
-  await self.fetchUserInfo(<user id>)
-  ```
-
-</details>
-
-<details>
-<summary><b><i>Simple</b> code style</i></summary>
-
-- Outside Module Function
-  
-  ```py
-  asyncio.run(bot.fetch_user_info(<user id>))
-  ```
-
-</br>
-
-- Inside Module Function (You can use ``await`` instead.)
-
-  ```py
-  await bot.fetch_user_info(<user id>)
-  ```
-
-</details>
-
+- user id: It is the user id. The user id is ``author_id``
 <!-- END FetchUserInfo -->
 
 </br>
