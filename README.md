@@ -166,24 +166,20 @@ bot.listen(delay=0, thread=True, run_forever=True, type="websocket")
 > - If the message is ``.hi`` will print author id of message to terminal.
 
 </br>
-<!-- fetch_account_info -->
 
+<!-- fetch_account_info -->
 ### Fetch Account Information
 
 This function will get the account information you are using in ``zjr-api``.
 
-<details>
-<summary><b><i>Code</b></i></summary>
 ```py
 self.fetch_account_info()
 ```
-</details>
-<!-- END fetch_account_info -->
 
+<!-- END fetch_account_info -->
 </br>
 
 <!-- fetch_phone_numher -->
-
 ### Fetch Phone Number
 
 This function will get user information using that user phone number.
@@ -191,69 +187,15 @@ This function will get user information using that user phone number.
 > [!NOTE]
 Can't get information of **hidden phone number** or **locked account**
 
-<details>
-<summary><b><i>Normal</b> code style</i></summary>
-
-- Outside Module Function
-
-  ```py
-  bot.fetchPhoneNumber("<phone number>")
-  ```
-
-</br>
-
-- Inside Module Function
-
-  ```py
-  self.fetchPhoneNumber("<phone number>")
-  ```
-
-</details>
-
-<details>
-<summary><b><i>Async</b> code style</i></summary>
-
-- Outside Module Function
-
-  ```py
-  asyncio.run(bot.fetchPhoneNumber("<phone number>"))
-  ```
-
-</br>
-
-- Inside Module Function (You can use ``await`` instead.)
-
-  ```py
-  await self.fetchPhoneNumber("<phone number>")
-  ```
-
-</details>
-
-<details>
-<summary><b><i>Simple</b> code style</i></summary>
-
-- Outside Module Function
-  
-  ```py
-  asyncio.run(bot.fetch_phone_number("<phone number>"))
-  ```
-
-</br>
-
-- Inside Module Function (You can use ``await`` instead.)
-
-  ```py
-  await bot.fetch_phone_number("<phone number>")
-  ```
-
-</details>
+```py
+self.fetch_phone_number("<phone number>")
+```
 
 <!-- END FetchPhoneNumber -->
 
 </br>
 
 <!-- fetchUserInfo -->
-
 ### Fetch User Info
 
 This function will get user information using that user ID.
