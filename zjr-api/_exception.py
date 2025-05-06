@@ -1,5 +1,5 @@
 class ZaloAPIException(Exception):
-    """Custom exception thrown by ``zaoapi``.
+    """Custom exception thrown by ``zjr-api``.
 
     All exceptions in the ``zjr-api`` module inherits this.
     """
