@@ -2,10 +2,10 @@
 
 ## ``zjr-api`` - Zalo API (Unofficial) for Python
 
-[![Project version](https://img.shields.io/badge/pypi-v1.0.2-blue.svg "Project version")](https://pypi.org/project/zlapi/1.0.2)
-[![Supported python versions: >= 3. and pypy](https://badgen.net/badge/python/>=3.,pypy?list=| "Supported python versions: >= 3. and pypy")](zlapi)
-[![License: MIT License](https://img.shields.io/badge/license-MIT-lightgreen.svg "License: MIT License")](https://github.com/Its-VrxxDev/zlapi/blob/master/LICENSE)
-[![Documentation](https://img.shields.io/badge/docs-stop_updating-red.svg "Documentation")](https://vrxx1337.vercel.app/zlapi/docs/lastest)
+[![Project version](https://img.shields.io/badge/pypi-v1.0.2-blue.svg "Project version")](https://pypi.org/project/zjr-api/1.0.2)
+[![Supported python versions: >= 3. and pypy](https://badgen.net/badge/python/>=3.,pypy?list=| "Supported python versions: >= 3. and pypy")](zjr-api)
+[![License: MIT License](https://img.shields.io/badge/license-MIT-lightgreen.svg "License: MIT License")](https://github.com/Its-VrxxDev/zjr-api/blob/master/LICENSE)
+[![Documentation](https://img.shields.io/badge/docs-stop_updating-red.svg "Documentation")](https://vrxx1337.vercel.app/zjr-api/docs/lastest)
 
 ### What's new? 
 
@@ -117,7 +117,7 @@ bot.listen(run_forever=True)
 
 </br>
 
-### Custom On Message Function
+### On Message Function
 
 ``on_message`` function will be called when receiving a message from ``listen`` function. **So we can handle that message here.**
 
@@ -193,7 +193,6 @@ Can't get information of **hidden phone number** or **locked account**
 ```py
 self.fetch_phone_number("<phone number>")
 ```
-- phone number: it is the user's phone number.
 
 <!-- END FetchPhoneNumber -->
 
@@ -202,368 +201,96 @@ self.fetch_phone_number("<phone number>")
 <!-- fetchUserInfo -->
 ### Fetch User Info
 
+It is a function to get user information by user id.
+
 ```py
 self.fetch_user_info(<user id>)
 ```
 
-- user id: It is the user id. The user id is ``author_id``
 <!-- END FetchUserInfo -->
 
 </br>
 
 <!-- fetchGroupInfo -->
-
 ### Fetch Group Info
 
 This function will get group information using that group ID.
 
-> - In ``Normal``/``Async`` code style you can get user id with thread_id argument
-> - In ``Simple`` code style you can get user id with ctx.thread_id argument
-> - Or you can use group id if you already have one
-
-<details>
-<summary><b><i>Normal</b> code style</i></summary>
-
-- Outside Module Function
-
-  ```py
-  bot.fetchGroupInfo(<group id>)
-  ```
-
-</br>
-
-- Inside Module Function
-
-  ```py
-  self.fetchGroupInfo(<group id>)
-  ```
-
-</details>
-
-<details>
-<summary><b><i>Async</b> code style</i></summary>
-
-- Outside Module Function
-
-  ```py
-  asyncio.run(bot.fetchGroupInfo(<group id>))
-  ```
-
-</br>
-
-- Inside Module Function (You can use ``await`` instead.)
-
-  ```py
-  await self.fetchGroupInfo(<group id>)
-  ```
-
-</details>
-
-<details>
-<summary><b><i>Simple</b> code style</i></summary>
-
-- Outside Module Function
-  
-  ```py
-  asyncio.run(bot.fetch_group_info(<group id>))
-  ```
-
-</br>
-
-- Inside Module Function (You can use ``await`` instead.)
-
-  ```py
-  await bot.fetch_group_info(<user id>)
-  ```
-
-</details>
+```py
+self.fetchGroupInfo(<group id>)
+```
 
 <!-- END FetchGroupInfo -->
 
 </br>
 
 <!-- fetchAllFriends -->
-
 ### Fetch All Friends
 
-This function will get all the friends information of the account currently using the ``zlapi``.
+This function will get all the friends information of the account currently using the ``zjr-api``.
 
-<details>
-<summary><b><i>Normal</b> code style</i></summary>
-
-- Outside Module Function
-
-  ```py
-  bot.fetchAllFriends()
-  ```
-
-</br>
-
-- Inside Module Function
-
-  ```py
-  self.fetchAllFriends()
-  ```
-
-</details>
-
-<details>
-<summary><b><i>Async</b> code style</i></summary>
-
-- Outside Module Function
-
-  ```py
-  asyncio.run(bot.fetchAllFriends())
-  ```
-
-</br>
-
-- Inside Module Function (You can use ``await`` instead.)
-
-  ```py
-  await self.fetchAllFriends()
-  ```
-
-</details>
-
-<details>
-<summary><b><i>Simple</b> code style</i></summary>
-
-- Outside Module Function
-  
-  ```py
-  asyncio.run(bot.fetch_all_friends())
-  ```
-
-</br>
-
-- Inside Module Function (You can use ``await`` instead.)
-
-  ```py
-  await bot.fetch_all_friends()
-  ```
-
-</details>
+```py
+self.fetchAllFriends()
+```
 
 <!-- END FetchAllFriends -->
 
 </br>
 
 <!-- fetchAllGroups -->
-
 ### Fetch All Groups
 
-This function will get all the groups id of the account currently using the ``zlapi``.
+This function will get all the groups id of the account currently using the ``zjr-api``.
 
-<details>
-<summary><b><i>Normal</b> code style</i></summary>
-
-- Outside Module Function
-
-  ```py
-  bot.fetchAllGroups()
-  ```
-
-</br>
-
-- Inside Module Function
-
-  ```py
-  self.fetchAllGroups()
-  ```
-
-</details>
-
-<details>
-<summary><b><i>Async</b> code style</i></summary>
-
-- Outside Module Function
-
-  ```py
-  asyncio.run(bot.fetchAllGroups())
-  ```
-
-</br>
-
-- Inside Module Function (You can use ``await`` instead.)
-
-  ```py
-  await self.fetchAllGroups()
-  ```
-
-</details>
-
-<details>
-<summary><b><i>Simple</b> code style</i></summary>
-
-- Outside Module Function
-  
-  ```py
-  asyncio.run(bot.fetch_all_groups())
-  ```
-
-</br>
-
-- Inside Module Function (You can use ``await`` instead.)
-
-  ```py
-  await bot.fetch_all_groups()
-  ```
-
-</details>
+```py
+self.fetchAllGroups()
+```
 
 <!-- END FetchAllGroups -->
 
 </br>
 
 <!-- changeAccountSetting -->
-
 ### Change Account Setting
 
-This function will change setting of the account currently using the ``zlapi``.
+This function will change setting of the account currently using the ``zjr-api``.
 
 > - Args:
 >    - name (str): The new account name
 >    - dob (str): Date of birth wants to change (format: year-month-day)
 >    - gender (int | str): Gender wants to change (0 = Male, 1 = Female)
 
-<details>
-<summary><b><i>Normal</b> code style</i></summary>
 
-- Outside Module Function
-
-  ```py
-  bot.changeAccountSetting(<name>, <dob>, <gender>)
-  ```
-
-</br>
-
-- Inside Module Function
-
-  ```py
-  self.changeAccountSetting(<name>, <dob>, <gender>)
-  ```
-
-</details>
-
-<details>
-<summary><b><i>Async</b> code style</i></summary>
-
-- Outside Module Function
-
-  ```py
-  asyncio.run(bot.changeAccountSetting(<name>, <dob>, <gender>))
-  ```
-
-</br>
-
-- Inside Module Function (You can use ``await`` instead.)
-
-  ```py
-  await self.changeAccountSetting(<name>, <dob>, <gender>)
-  ```
-
-</details>
-
-<details>
-<summary><b><i>Simple</b> code style</i></summary>
-
-- Outside Module Function
-  
-  ```py
-  asyncio.run(bot.change_account_setting(<name>, <dob>, <gender>))
-  ```
-
-</br>
-
-- Inside Module Function (You can use ``await`` instead.)
-
-  ```py
-  await bot.change_account_setting(<name>, <dob>, <gender>)
-  ```
-
-</details>
+```py
+self.change_account_setting(<name>, <dob>, <gender>)
+```
 
 <!-- END changeAccountSetting -->
 
 </br>
 
 <!-- changeAccountAvatar -->
-
 ### Change Account Avatar
 
-This function will upload/change avatar of the account currently using the ``zlapi``.
+This function will upload/change avatar of the account currently using the ``zjr-api``.
 
 > - Args:
->    - filePath (str): A path to the image to upload/change avatar
->    - size (int): Avatar image size (default = auto)
+>   - filePath (str): A path to the image to upload/change avatar
+>   - size (int): Avatar image size (default = auto)
 >	- width (int): Width of avatar image
 >	- height (int): height of avatar image
 >	- language (int | str): Zalo Website language ? (idk)
 
-<details>
-<summary><b><i>Normal</b> code style</i></summary>
 
-- Outside Module Function
-
-  ```py
-  bot.changeAccountAvatar(<filePath>)
-  ```
-
-</br>
-
-- Inside Module Function
-
-  ```py
-  self.changeAccountAvatar(<filePath>)
-  ```
-
-</details>
-
-<details>
-<summary><b><i>Async</b> code style</i></summary>
-
-- Outside Module Function
-
-  ```py
-  asyncio.run(bot.changeAccountAvatar(<filePath>))
-  ```
-
-</br>
-
-- Inside Module Function (You can use ``await`` instead.)
-
-  ```py
-  await self.changeAccountAvatar(<filePath>)
-  ```
-
-</details>
-
-<details>
-<summary><b><i>Simple</b> code style</i></summary>
-
-- Outside Module Function
-  
-  ```py
-  asyncio.run(bot.change_account_avatar(<filePath>))
-  ```
-
-</br>
-
-- Inside Module Function (You can use ``await`` instead.)
-
-  ```py
-  await bot.change_account_avatar(<filePath>)
-  ```
-
-</details>
+```py
+self.changeAccountAvatar(<filePath>)
+```
 
 <!-- END changeAccountAvatar -->
 
 </br>
 
 <!-- sendFriendRequest -->
-
 ### Send Friend Request
 
 This function will send friend request to a user by ID.
@@ -4189,7 +3916,7 @@ mention = MultiMention([mention1, mention2])
 
 ## Example
 
-See [examples](examples) folder to learn more about ``zlapi``.
+See [examples](examples) folder to learn more about ``zjr-api``.
 
 </br>
 
