@@ -7,9 +7,12 @@
 [![License: MIT License](https://img.shields.io/badge/license-MIT-lightgreen.svg "License: MIT License")](https://github.com/Its-VrxxDev/zlapi/blob/master/LICENSE)
 [![Documentation](https://img.shields.io/badge/docs-stop_updating-red.svg "Documentation")](https://vrxx1337.vercel.app/zlapi/docs/lastest)
 
-### Note
+### What's new? 
 
-- Liên hệ (Zalo): 0586921857 nếu gặp sự cố
+- Send a call using ``send_call``
+- Send todo using ``send_to_do``
+- Join group using ``join_group``
+- Leave group using ``leave_group``
 
 ### What is ``zjr-api``?
 
@@ -34,7 +37,7 @@ However, there's a catch! **Using this library may not comply with Zalo's Terms 
 ## Installation
 
 ```bash
-pip install git+https://github.com/Jerous-Dev/zjr-api.git
+pip install git+https://github.com/Jerous/zjr-api.git
 ```
 
 </br>
