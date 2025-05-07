@@ -37,7 +37,7 @@ However, there's a catch! **Using this library may not comply with Zalo's Terms 
 ## Installation
 
 ```bash
-pip install git+https://github.com/Jerous/zjr-api.git
+pip install git+https://github.com/Jerous-Dev/zjr-api.git
 ```
 
 </br>
@@ -117,17 +117,13 @@ bot.listen(run_forever=True)
 
 </br>
 
-<details>
-<summary>### Custom On Message Function</summary>
+### Custom On Message Function
 
-<p>
+``on_message`` function will be called when receiving a message from ``listen`` function. **So we can handle that message here.**
 
-<code>on_message</code> function will be called when receiving a message from <code>listen</code> function.  
-<strong>So we can handle that message here.</strong>
+* ``Normal`` code style
 
-</p>
-
-```python
+```py
 from zjr-api import *
 from zjr-api.models import *
 
@@ -138,8 +134,9 @@ class bot(ZaloAPI):
     def __init__(self, api_key, secret_key, imei, session_cookies):
         super().__init__(api_key, secret_key, imei=imei, session_cookies=session_cookies)
 
-    def on_message(self, mid, author_id, message, messsge_object, thread_id, thread_type):
-        pass
+	def on_message(self, mid, author_id, message, messsge_object, thread_id, thread_type):
+		
+		pass
 
 bot = bot('api_key', 'secret_key', imei=imei, session_cookies=session_cookie)
 bot.listen(delay=0, thread=True, run_forever=True, type="websocket")
