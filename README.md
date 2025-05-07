@@ -117,13 +117,17 @@ bot.listen(run_forever=True)
 
 </br>
 
-### Custom On Message Function
+<details>
+<summary>### Custom On Message Function</summary>
 
-``on_message`` function will be called when receiving a message from ``listen`` function. **So we can handle that message here.**
+<p>
 
-* ``Normal`` code style
+<code>on_message</code> function will be called when receiving a message from <code>listen</code> function.  
+<strong>So we can handle that message here.</strong>
 
-```py
+</p>
+
+```python
 from zjr-api import *
 from zjr-api.models import *
 
@@ -134,9 +138,8 @@ class bot(ZaloAPI):
     def __init__(self, api_key, secret_key, imei, session_cookies):
         super().__init__(api_key, secret_key, imei=imei, session_cookies=session_cookies)
 
-	def on_message(self, mid, author_id, message, messsge_object, thread_id, thread_type):
-		
-		pass
+    def on_message(self, mid, author_id, message, messsge_object, thread_id, thread_type):
+        pass
 
 bot = bot('api_key', 'secret_key', imei=imei, session_cookies=session_cookie)
 bot.listen(delay=0, thread=True, run_forever=True, type="websocket")
